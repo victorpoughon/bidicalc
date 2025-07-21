@@ -1,0 +1,16 @@
+numbers {
+  Exp
+    = UnaryExp
+
+  UnaryExp
+    = "+" number  -- pos
+    | "-" number  -- neg
+    | number
+
+  exponentPart
+    = ("e" | "E") ("+" | "-")? digit+
+
+  number
+    = digit+ ("." digit*)? exponentPart?  -- leftside
+    | "." digit+ exponentPart?           -- rightside
+}

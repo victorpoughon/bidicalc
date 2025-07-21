@@ -1,0 +1,27 @@
+{
+  "name": "bidicalc-engine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "generate": "ohm generateBundles --esm --withTypes 'grammar/src/*.ohm'",
+    "test": "npm run generate && node --import tsx --test **/tests/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@ohm-js/cli": "^2.0.0",
+    "@types/node": "^24.0.15",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "neverthrow": "^8.2.0",
+    "not-so-float": "^2.7.0",
+    "ohm-js": "^17.1.0",
+    "ts-pattern": "^5.8.0"
+  },
+  "type": "module"
+}

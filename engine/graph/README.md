@@ -1,0 +1,1 @@
+Partial port of https://github.com/dagrejs/graphlib to typescript.

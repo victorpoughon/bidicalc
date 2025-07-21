@@ -1,0 +1,89 @@
+/*
+https://www.inclusivecolors.com/?style_dictionary=eyJjb2xvciI6eyJiYXNlIjp7ImdyYXkiOnsiNTAiOnsidmFsdWUiOiIjZjRmNGY0In0sIjEwMCI6eyJ2YWx1ZSI6IiNlMGUwZTAifSwiMjAwIjp7InZhbHVlIjoiI2QzZDNkMyJ9LCIzMDAiOnsidmFsdWUiOiIjYzZjNmM2In0sIjQwMCI6eyJ2YWx1ZSI6IiNhOGE4YTgifSwiNTAwIjp7InZhbHVlIjoiIzhkOGQ4ZCJ9LCI2MDAiOnsidmFsdWUiOiIjNmY2ZjZmIn0sIjcwMCI6eyJ2YWx1ZSI6IiM1MjUyNTIifSwiODAwIjp7InZhbHVlIjoiIzM5MzkzOSJ9LCI5MDAiOnsidmFsdWUiOiIjMjYyNjI2In0sIjk1MCI6eyJ2YWx1ZSI6IiMxNjE2MTYifX0sInJlZCI6eyI1MCI6eyJ2YWx1ZSI6IiNmZmYxZjEifSwiMTAwIjp7InZhbHVlIjoiI2ZmZDdkOSJ9LCIyMDAiOnsidmFsdWUiOiIjZmZjNWM5In0sIjMwMCI6eyJ2YWx1ZSI6IiNmZmIzYjgifSwiNDAwIjp7InZhbHVlIjoiI2ZmODM4OSJ9LCI1MDAiOnsidmFsdWUiOiIjZmE0ZDU2In0sIjYwMCI6eyJ2YWx1ZSI6IiNkYTFlMjgifSwiNzAwIjp7InZhbHVlIjoiI2EyMTkxZiJ9LCI4MDAiOnsidmFsdWUiOiIjNzUwZTEzIn0sIjkwMCI6eyJ2YWx1ZSI6IiM1MjA0MDgifSwiOTUwIjp7InZhbHVlIjoiIzJkMDcwOSJ9fSwieWVsbG93Ijp7IjUwIjp7InZhbHVlIjoiI2ZiZjRkYiJ9LCIxMDAiOnsidmFsdWUiOiIjZjRkZDk4In0sIjIwMCI6eyJ2YWx1ZSI6IiNmMmQwNmUifSwiMzAwIjp7InZhbHVlIjoiI2VjYzM1MiJ9LCI0MDAiOnsidmFsdWUiOiIjZDBhMTJjIn0sIjUwMCI6eyJ2YWx1ZSI6IiNiMTg2MTMifSwiNjAwIjp7InZhbHVlIjoiIzhlNmEwMCJ9LCI3MDAiOnsidmFsdWUiOiIjNjg0ZTAwIn0sIjgwMCI6eyJ2YWx1ZSI6IiM0ODM3MDAifSwiOTAwIjp7InZhbHVlIjoiIzMwMjQwMCJ9LCI5NTAiOnsidmFsdWUiOiIjMWMxNTAwIn19LCJncmVlbiI6eyI1MCI6eyJ2YWx1ZSI6IiNkZWZiZTYifSwiMTAwIjp7InZhbHVlIjoiI2E3ZjBiYSJ9LCIyMDAiOnsidmFsdWUiOiIjODllN2EyIn0sIjMwMCI6eyJ2YWx1ZSI6IiM2ZmRjOGMifSwiNDAwIjp7InZhbHVlIjoiIzQyYmU2NSJ9LCI1MDAiOnsidmFsdWUiOiIjMjRhMTQ4In0sIjYwMCI6eyJ2YWx1ZSI6IiMxOTgwMzgifSwiNzAwIjp7InZhbHVlIjoiIzBlNjAyNyJ9LCI4MDAiOnsidmFsdWUiOiIjMDQ0MzE3In0sIjkwMCI6eyJ2YWx1ZSI6IiMwMjJkMGQifSwiOTUwIjp7InZhbHVlIjoiIzA3MTkwOCJ9fSwidGVhbCI6eyI1MCI6eyJ2YWx1ZSI6IiNkOWZiZmIifSwiMTAwIjp7InZhbHVlIjoiIzllZjBmMCJ9LCIyMDAiOnsidmFsdWUiOiIjNzRlNmU1In0sIjMwMCI6eyJ2YWx1ZSI6IiMzZGRiZDkifSwiNDAwIjp7InZhbHVlIjoiIzA4YmRiYSJ9LCI1MDAiOnsidmFsdWUiOiIjMDA5ZDlhIn0sIjYwMCI6eyJ2YWx1ZSI6IiMwMDdkNzkifSwiNzAwIjp7InZhbHVlIjoiIzAwNWQ1ZCJ9LCI4MDAiOnsidmFsdWUiOiIjMDA0MTQ0In0sIjkwMCI6eyJ2YWx1ZSI6IiMwMjJiMzAifSwiOTUwIjp7InZhbHVlIjoiIzA4MWExYyJ9fSwiYmx1ZSI6eyI1MCI6eyJ2YWx1ZSI6IiNmMGY0ZmUifSwiMTAwIjp7InZhbHVlIjoiI2Q1ZTFmZCJ9LCIyMDAiOnsidmFsdWUiOiIjYmRkMmZiIn0sIjMwMCI6eyJ2YWx1ZSI6IiNhM2MxZmEifSwiNDAwIjp7InZhbHVlIjoiIzc1YTlmOSJ9LCI1MDAiOnsidmFsdWUiOiIjMmM4ZWYyIn0sIjYwMCI6eyJ2YWx1ZSI6IiMyMDcxYzIifSwiNzAwIjp7InZhbHVlIjoiIzE0NTM5MiJ9LCI4MDAiOnsidmFsdWUiOiIjMGIzYjZiIn0sIjkwMCI6eyJ2YWx1ZSI6IiMwNTI3NDkifSwiOTUwIjp7InZhbHVlIjoiIzAyMTYyZSJ9fSwicHVycGxlIjp7IjUwIjp7InZhbHVlIjoiI2Y2ZjJmZiJ9LCIxMDAiOnsidmFsdWUiOiIjZThkYWZmIn0sIjIwMCI6eyJ2YWx1ZSI6IiNkZWNhZmYifSwiMzAwIjp7InZhbHVlIjoiI2Q0YmJmZiJ9LCI0MDAiOnsidmFsdWUiOiIjYmU5NWZmIn0sIjUwMCI6eyJ2YWx1ZSI6IiNhNTZlZmYifSwiNjAwIjp7InZhbHVlIjoiIzhhM2ZmYyJ9LCI3MDAiOnsidmFsdWUiOiIjNjkyOWM0In0sIjgwMCI6eyJ2YWx1ZSI6IiM0OTFkOGIifSwiOTAwIjp7InZhbHVlIjoiIzMxMTM1ZSJ9LCI5NTAiOnsidmFsdWUiOiIjMWMwZjMwIn19fX19
+*/
+
+:root {
+    --color-gray-950: #161616;
+    --color-gray-900: #262626;
+    --color-gray-800: #393939;
+    --color-gray-700: #525252;
+    --color-gray-600: #6f6f6f;
+    --color-gray-500: #8d8d8d;
+    --color-gray-400: #a8a8a8;
+    --color-gray-300: #c6c6c6;
+    --color-gray-200: #d3d3d3;
+    --color-gray-100: #e0e0e0;
+    --color-gray-50: #f4f4f4;
+
+    --color-red-950: #2d0709;
+    --color-red-900: #520408;
+    --color-red-800: #750e13;
+    --color-red-700: #a2191f;
+    --color-red-600: #da1e28;
+    --color-red-500: #fa4d56;
+    --color-red-400: #ff8389;
+    --color-red-300: #ffb3b8;
+    --color-red-200: #ffc5c9;
+    --color-red-100: #ffd7d9;
+    --color-red-50: #fff1f1;
+
+    --color-yellow-950: #1c1500;
+    --color-yellow-900: #302400;
+    --color-yellow-800: #483700;
+    --color-yellow-700: #684e00;
+    --color-yellow-600: #8e6a00;
+    --color-yellow-500: #b18613;
+    --color-yellow-400: #d0a12c;
+    --color-yellow-300: #ecc352;
+    --color-yellow-200: #f2d06e;
+    --color-yellow-100: #f4dd98;
+    --color-yellow-50: #fbf4db;
+
+    --color-green-950: #071908;
+    --color-green-900: #022d0d;
+    --color-green-800: #044317;
+    --color-green-700: #0e6027;
+    --color-green-600: #198038;
+    --color-green-500: #24a148;
+    --color-green-400: #42be65;
+    --color-green-300: #6fdc8c;
+    --color-green-200: #89e7a2;
+    --color-green-100: #a7f0ba;
+    --color-green-50: #defbe6;
+
+    --color-teal-950: #081a1c;
+    --color-teal-900: #022b30;
+    --color-teal-800: #004144;
+    --color-teal-700: #005d5d;
+    --color-teal-600: #007d79;
+    --color-teal-500: #009d9a;
+    --color-teal-400: #08bdba;
+    --color-teal-300: #3ddbd9;
+    --color-teal-200: #74e6e5;
+    --color-teal-100: #9ef0f0;
+    --color-teal-50: #d9fbfb;
+
+    --color-blue-950: #02162e;
+    --color-blue-900: #052749;
+    --color-blue-800: #0b3b6b;
+    --color-blue-700: #145392;
+    --color-blue-600: #2071c2;
+    --color-blue-500: #2c8ef2;
+    --color-blue-400: #75a9f9;
+    --color-blue-300: #a3c1fa;
+    --color-blue-200: #bdd2fb;
+    --color-blue-100: #d5e1fd;
+    --color-blue-50: #f0f4fe;
+
+    --color-purple-950: #1c0f30;
+    --color-purple-900: #31135e;
+    --color-purple-800: #491d8b;
+    --color-purple-700: #6929c4;
+    --color-purple-600: #8a3ffc;
+    --color-purple-500: #a56eff;
+    --color-purple-400: #be95ff;
+    --color-purple-300: #d4bbff;
+    --color-purple-200: #decaff;
+    --color-purple-100: #e8daff;
+    --color-purple-50: #f6f2ff;
+}

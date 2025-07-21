@@ -1,0 +1,45 @@
+BIDICALC {
+  Exp
+    = AddExp
+
+  AddExp
+    = AddExp "+" MulExp  -- plus
+    | AddExp "-" MulExp  -- minus
+    | MulExp
+
+  MulExp
+    = MulExp "*" UnaryExp  -- times
+    | MulExp "/" UnaryExp  -- divide
+    | UnaryExp
+
+  ExpExp
+    = PriExp "^" UnaryExp  -- power
+    | PriExp
+
+  UnaryExp
+    = "+" ExpExp  -- pos
+    | "-" ExpExp  -- neg
+    | ExpExp
+
+
+  PriExp
+    = "(" Exp ")"  -- paren
+    | FunctionExp
+    | number
+    | CellRef
+
+  CellRef
+    = identifier                -- single
+    
+  identifier = letter (letter | digit)*
+
+  FunctionExp
+    = identifier "(" ListOf<Exp, ","> ")"
+
+  exponentPart
+    = ("e" | "E") ("+" | "-")? digit+
+
+  number
+    = digit+ ("." digit*)? exponentPart?  -- leftside
+    | "." digit+ exponentPart?           -- rightside
+}
