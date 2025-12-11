@@ -7,7 +7,7 @@ import {
 import { BidiError, SyntaxError, UnknownFunction, ArityError } from "../core/errors.ts";
 
 import * as ohm from "ohm-js";
-import * as tf from "@tensorflow/tfjs-core";
+import * as tf from "@tensorflow/tfjs";
 
 import { Result, ok, err } from "neverthrow";
 

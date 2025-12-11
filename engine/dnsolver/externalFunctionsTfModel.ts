@@ -1,4 +1,4 @@
-import * as tf from "@tensorflow/tfjs-core";
+import * as tf from "@tensorflow/tfjs";
 
 type TfFunc = (...args: tf.Tensor[]) => tf.Tensor;
 

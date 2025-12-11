@@ -1,7 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
 
-import * as tf from "@tensorflow/tfjs-core";
+import * as tf from "@tensorflow/tfjs";
 import "@tensorflow/tfjs-backend-cpu";
 
 import { validGrammar } from "../../grammar/tests/grammarTestCases.ts";

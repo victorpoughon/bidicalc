@@ -1,0 +1,13 @@
+{
+  "name": "bidicalc",
+  "private": true,
+  "workspaces": [
+    "engine",
+    "docs"
+  ],
+  "scripts": {
+    "docs:dev": "cd docs && npm run docs:dev",
+    "docs:build": "cd docs && npm run docs:build"
+  },
+  "devDependencies": {}
+}

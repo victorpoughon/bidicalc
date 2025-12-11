@@ -1,9 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
 
-import * as tf from "@tensorflow/tfjs-core";
-import "@tensorflow/tfjs-backend-cpu";
-
 import {
     constructTfModel,
     TfModel,

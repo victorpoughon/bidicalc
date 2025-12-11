@@ -8,7 +8,7 @@ import {
     constructTfModel,
     composeTfModel,
 } from "../dnsolver/semanticsTfModel.ts";
-import * as tf from "@tensorflow/tfjs-core";
+import * as tf from "@tensorflow/tfjs";
 
 // NSF MODEL
 import * as nsf from "not-so-float";

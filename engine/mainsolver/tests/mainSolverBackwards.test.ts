@@ -1,6 +1,8 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
 
+import "@tensorflow/tfjs-backend-cpu";
+
 import {
     expectSolve,
     expectExactSolve,
