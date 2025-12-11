@@ -4,6 +4,7 @@ import type { HeadConfig, TransformContext } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     srcDir: "src",
+    base: "/bidicalc/",
 
     title: "⇆ bidicalc",
     description: "A speadsheet where formulas also update backwards",
