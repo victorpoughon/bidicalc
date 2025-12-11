@@ -3,6 +3,8 @@
 BIDICALC is a bidirectional calculator, a spreadsheet where formulas also update
 backwards.
 
+**[TRY BIDICALC HERE](https://victorpoughon.github.io/bidicalc/)**
+
 <p align="center">
   <img src="./docs/src/bidicalc-figure1-withbackground.png" />
 </p>
