@@ -21,7 +21,7 @@ const BidicalcGrid = defineClientComponent(() => {
 
 <h1 class="main-title excalifont">bidicalc</h1>
 
-<div class="bidicalc-tagline excalifont">
+<div class="main-subtitle excalifont">
 A spreadsheet where formulas also update backwards
 </div>
 
@@ -221,8 +221,14 @@ h1.main-title {
   margin-bottom: 1.6rem;
 }
 
-.bidicalc-tagline {
+.main-subtitle {
   font-size: 1.4rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bidicalc-tagline {
+  font-size: 1.1rem;
   font-weight: bold;
   font-style: italic;
 }
