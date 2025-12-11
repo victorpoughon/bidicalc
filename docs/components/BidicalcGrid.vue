@@ -31,15 +31,19 @@ provide(CellGridInjectionKey, {
 /* TYPES, EXPOSED METHODS AND EMITS */
 
 const cellGrid = useTemplateRef("cell-grid");
+const selectElement = useTemplateRef("examples-select-element");
+
+function setExample(index: number) {
+    [gridIndexing, mutableGridState] = examples[index].fn();
+    cellGrid.value?.setGrid(gridIndexing, mutableGridState);
+}
 
 function onSelectExample(ev: Event) {
     const select = ev.target as HTMLSelectElement;
     const value = select.value;
     const index = select.selectedIndex;
 
-    [gridIndexing, mutableGridState] = examples[index].fn();
-
-    cellGrid.value?.setGrid(gridIndexing, mutableGridState);
+    setExample(index);
 }
 
 function onUpdate(ref: string, content: string, mode: bidi.ResolutionMode) {
@@ -57,9 +61,13 @@ function onUpdate(ref: string, content: string, mode: bidi.ResolutionMode) {
     cellGrid.value?.setCells(updated);
 }
 
-function onClear() {
-    mutableGridState.update(bidi.CellMap.empty(mutableGridState.keys()));
-    cellGrid.value?.setCells(mutableGridState);
+function onReset() {
+    if (selectElement.value === null) return;
+
+    const select = selectElement.value as HTMLSelectElement;
+    const index = select.selectedIndex;
+
+    setExample(index);
 }
 </script>
 
@@ -78,13 +86,13 @@ function onClear() {
     <div class="toolbar">
         <div class="examples-select">
             <label for="examples-select-element">Load example:&nbsp;</label>
-            <select name="pets" id="examples-select-element" @change="onSelectExample">
+            <select ref="examples-select-element" @change="onSelectExample">
                 <option v-for="(o, index) in examples" :key="index" :value="index.toString()">
                     {{ o.name }}
                 </option>
             </select>
         </div>
-        <button @click="onClear">Clear</button>
+        <button @click="onReset">Reset</button>
     </div>
 </template>
 
