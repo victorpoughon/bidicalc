@@ -117,6 +117,60 @@ function leastsquare(): [bidi.GridIndexing, bidi.MutableCellMap] {
     return [indexing, gridState];
 }
 
+function cookies(): [bidi.GridIndexing, bidi.MutableCellMap] {
+    const [indexing, gridState] = spreadsheet(12, 5);
+
+    input(gridState, "B1", `"Qty for 4 (g)"`);
+    input(gridState, "C1", `"g per cup"`);
+    input(gridState, "D1", `"Qty (g)"`);
+    input(gridState, "E1", `"Qty (Cups)"`);
+
+    input(gridState, "A2", `"Flour"`);
+    input(gridState, "A3", `"Butter"`);
+    input(gridState, "A4", `"Sugar"`);
+    input(gridState, "A5", `"Eggs"`);
+    input(gridState, "A6", `"Chocolate"`);
+    input(gridState, "A7", `"Salt"`);
+
+    input(gridState, "B2", `#200`);
+    input(gridState, "B3", `#220`);
+    input(gridState, "B4", `#160`);
+    input(gridState, "B5", `#100`);
+    input(gridState, "B6", `#250`);
+    input(gridState, "B7", `#3`);
+
+    input(gridState, "C2", `#120`);
+    input(gridState, "C3", `#225`);
+    input(gridState, "C4", `#210`);
+    input(gridState, "C5", `#50`);
+    input(gridState, "C6", `#175`);
+    input(gridState, "C7", `#290`);
+
+    input(gridState, "D2", `B2/B10*E10`);
+    input(gridState, "D3", `B3/B10*E10`);
+    input(gridState, "D4", `B4/B10*E10`);
+    input(gridState, "D5", `B5/B10*E10`);
+    input(gridState, "D6", `B6/B10*E10`);
+    input(gridState, "D7", `B7/B10*E10`);
+
+    input(gridState, "E2", `D2/C2`);
+    input(gridState, "E3", `D3/C3`);
+    input(gridState, "E4", `D4/C4`);
+    input(gridState, "E5", `D5/C5`);
+    input(gridState, "E6", `D6/C6`);
+    input(gridState, "E7", `D7/C7`);
+
+    input(gridState, "A9", `"Recipe"`);
+    input(gridState, "A10", `"Servings"`);
+    input(gridState, "B10", "#4");
+
+    input(gridState, "D9", `"Preparation"`);
+    input(gridState, "D10", `"Servings"`);
+    input(gridState, "E10", "4");
+
+    return [indexing, gridState];
+}
+
 interface Example {
     name: string;
     fn: () => [bidi.GridIndexing, bidi.MutableCellMap];
@@ -127,7 +181,8 @@ export const examples: Example[] = [
     { name: "Spreadsheet 12x6", fn: blankSpreadsheet(12, 6) },
     { name: "Unit Converter", fn: unitConverter },
     { name: "Circle", fn: circle },
-    { name: "Polynomial", fn: polynomials },
+    { name: "Cookies Recipe", fn: cookies },
     { name: "Compound Interest", fn: interest },
+    { name: "Polynomial", fn: polynomials },
     // { name: "Least Square", fn: leastsquare },
 ];
